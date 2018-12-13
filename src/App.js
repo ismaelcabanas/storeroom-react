@@ -9,7 +9,7 @@ class Welcome extends Component {
 
 class Text extends Component {
   render() {
-    const textDependOnBool = this.props.boolean ? 'Cierto' : 'False'
+    const textDependOnBool = this.props.isActivated ? 'On' : 'Off'
 
     return (
           <div>
@@ -28,7 +28,7 @@ class App extends Component {
         <Navigation />
         <div className="container">
           <Welcome title='My Storeroom React App' />
-          <Text text='Text string' number={2} boolean={true}/>
+          <Text text='Text string' number={2} isActivated/>
         </div>
       </div>
     );

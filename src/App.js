@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import Navigation from './components/Navigation';
 
-const Welcome = (props) => <h1>{props.title}</h1>
+class Welcome extends Component {
+  render() {
+    return <h1>{this.props.title}</h1>
+  }
+}
 
 class App extends Component {
   render() {

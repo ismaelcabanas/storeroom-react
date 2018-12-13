@@ -9,7 +9,13 @@ class Welcome extends Component {
 
 class Text extends Component {
   render() {
-    return <p>{this.props.text}</p><p>{this.props.number}</p>
+    return (
+          <div>
+            <p>{this.props.text}</p>
+            <p>{this.props.number}</p>
+            <p>{JSON.stringify(this.props.boolean)}</p>
+          </div>
+    )
   }
 }
 
@@ -20,7 +26,7 @@ class App extends Component {
         <Navigation />
         <div className="container">
           <Welcome title='My Storeroom React App' />
-          <Text text='Text string' number={2} />
+          <Text text='Text string' number={2} boolean={true}/>
         </div>
       </div>
     );

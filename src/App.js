@@ -7,6 +7,12 @@ class Welcome extends Component {
   }
 }
 
+class Text extends Component {
+  render() {
+    return <p>{this.props.text}</p><p>{this.props.number}</p>
+  }
+}
+
 class App extends Component {
   render() {
     return (
@@ -14,6 +20,7 @@ class App extends Component {
         <Navigation />
         <div className="container">
           <Welcome title='My Storeroom React App' />
+          <Text text='Text string' number={2} />
         </div>
       </div>
     );

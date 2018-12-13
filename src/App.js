@@ -28,7 +28,7 @@ class App extends Component {
         <Navigation />
         <div className="container">
           <Welcome title='My Storeroom React App' />
-          <Text text='Text string' number={2} isActivated/>
+          <Text text='Text string' number={2} />
         </div>
       </div>
     );

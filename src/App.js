@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Navigation from './components/Navigation';
 
-function Welcome(props) {
-  return <h1>{props.title}</h1>
-}
+const Welcome = (props) => <h1>{props.title}</h1>
 
 class App extends Component {
   render() {

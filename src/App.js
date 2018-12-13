@@ -9,11 +9,13 @@ class Welcome extends Component {
 
 class Text extends Component {
   render() {
+    const textDependOnBool = this.props.boolean ? 'Cierto' : 'False'
+
     return (
           <div>
             <p>{this.props.text}</p>
             <p>{this.props.number}</p>
-            <p>{JSON.stringify(this.props.boolean)}</p>
+            <p>{textDependOnBool}</p>
           </div>
     )
   }

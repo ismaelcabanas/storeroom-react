@@ -10,7 +10,7 @@ class Welcome extends Component {
 class Text extends Component {
   render() {
     const textDependOnBool = this.props.isActivated ? 'On' : 'Off'
-    const mappedNumbers = this.props.arrayOfNumbers.map(n => n*2)
+    const mappedNumbers = this.props.arrayOfNumbers.map(this.props.multiply)
     return (
           <div>
             <p>{mappedNumbers.join(', ')}</p>
@@ -31,6 +31,7 @@ class App extends Component {
             arrayOfNumbers={[2,5,6]} 
             objectWithInfo={{key:'First Value', key2:'Other value'}}
             isActivated
+            multiply={(number) => number * 4}
             number={2} 
             text='Text string'             
           />

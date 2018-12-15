@@ -12,12 +12,14 @@ class Text extends Component {
     const {
       arrayOfNumbers,      
       multiply,
-      objectWithInfo
+      objectWithInfo,
+      title
     } = this.props
 
     const mappedNumbers = arrayOfNumbers.map(multiply)
     return (
           <div>
+            {title}
             <p>{mappedNumbers.join(', ')}</p>
             <p>{objectWithInfo.key}</p>
           </div>
@@ -37,7 +39,8 @@ class App extends Component {
             multiply={(number) => number * 4}
             number={2} 
             objectWithInfo={{key:'First Value', key2:'Other value'}}
-            text='Text string'             
+            text='Text string'  
+            title={<h1>My title</h1>}
           />
         </div>
       </div>

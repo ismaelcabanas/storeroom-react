@@ -15,9 +15,7 @@ class Text extends Component {
       objectWithInfo,
       title
     } = this.props
-
-    this.props.title = 'Other title'
-    
+        
     const mappedNumbers = arrayOfNumbers.map(multiply)
     return (
           <div>

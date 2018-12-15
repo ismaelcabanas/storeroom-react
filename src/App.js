@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import Navigation from './components/Navigation';
 
-class Title extends Component {
+class Contador extends Component {
   render () {
-    return <h1>{this.props.text}</h1>
+    const contador = 0
+    return <span>{contador}</span>
   }
- }
-
- Title.defaultProps = {
-  text: 'Titulo por defecto'
  }
 
 class App extends Component {
@@ -17,9 +14,8 @@ class App extends Component {
       <div>
         <Navigation />
         <div className="container">
-          <Title 
-            text = 'Mi título'
-          />
+          <p>Mi primer componente con State</p>
+          <Contador />
         </div>
       </div>
     );

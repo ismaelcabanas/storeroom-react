@@ -9,12 +9,17 @@ class Welcome extends Component {
 
 class Text extends Component {
   render() {
-    const textDependOnBool = this.props.isActivated ? 'On' : 'Off'
-    const mappedNumbers = this.props.arrayOfNumbers.map(this.props.multiply)
+    const {
+      arrayOfNumbers,      
+      multiply,
+      objectWithInfo
+    } = this.props
+
+    const mappedNumbers = arrayOfNumbers.map(multiply)
     return (
           <div>
             <p>{mappedNumbers.join(', ')}</p>
-            <p>{this.props.objectWithInfo.key}</p>
+            <p>{objectWithInfo.key}</p>
           </div>
     )
   }
@@ -29,10 +34,9 @@ class App extends Component {
           <Welcome title='My Storeroom React App' />
           <Text 
             arrayOfNumbers={[2,5,6]} 
-            objectWithInfo={{key:'First Value', key2:'Other value'}}
-            isActivated
             multiply={(number) => number * 4}
             number={2} 
+            objectWithInfo={{key:'First Value', key2:'Other value'}}
             text='Text string'             
           />
         </div>

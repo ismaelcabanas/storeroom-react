@@ -10,12 +10,10 @@ class Welcome extends Component {
 class Text extends Component {
   render() {
     const textDependOnBool = this.props.isActivated ? 'On' : 'Off'
-
+    const mappedNumbers = this.props.arrayOfNumbers.map(n => n*2)
     return (
           <div>
-            <p>{this.props.text}</p>
-            <p>{this.props.number}</p>
-            <p>{textDependOnBool}</p>
+            <p>{mappedNumbers.join(', ')}</p>
           </div>
     )
   }
@@ -29,6 +27,7 @@ class App extends Component {
         <div className="container">
           <Welcome title='My Storeroom React App' />
           <Text 
+            arrayOfNumbers={[2,5,6]} 
             isActivated
             number={2} 
             text='Text string'             

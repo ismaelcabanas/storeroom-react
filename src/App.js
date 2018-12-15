@@ -17,7 +17,9 @@ class App extends Component {
       <div>
         <Navigation />
         <div className="container">
-          <Title />
+          <Title 
+            text = 'Mi título'
+          />
         </div>
       </div>
     );

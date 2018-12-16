@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import Navigation from './components/Navigation';
 
 class Contador extends Component {
-  constructor () {
-    super()
-    this.state = {contador: 1}
-  }
+  state = {contador: 0}
+  
   render () {
     return <span>{this.state.contador}</span>
   }

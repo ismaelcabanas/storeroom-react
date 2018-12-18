@@ -16,6 +16,10 @@ class Contador extends Component {
   }
 }
 
+Contador.defaultProps = {
+  contadorInicial: 0
+}
+
 class ContadorNumero extends Component {
   render () {
     console.log('ContadorNumero render()')

@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Navigation from './components/Navigation';
 
 class Contador extends Component {
-  constructor () {
-    super()
-    this.state = {contador: 0}
+  constructor (props) {
+    super(props)
+    this.state = {contador: this.props.contadorInicial}
     setInterval(() => {
       this.setState({contador: this.state.contador + 1})
     }, 1000)

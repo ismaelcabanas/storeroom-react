@@ -1,29 +1,34 @@
 import React, { Component } from 'react';
 
-class ComponentA extends Component {
+class LoginButton extends Component {
     render () {
-        return <p>Componente A</p>
+        return <button>Log in</button>
     }
 }
 
-class ComponentB extends Component {
+class LogoutButton extends Component {
     render () {
-        return <p>Componente B</p>
+        return (
+            <div>
+                <p>Welcome, user!</p>
+                <button>Log out</button>
+            </div>
+        )
     }
 }
 
 export default class ConditionalSection extends Component{
     constructor() {
         super()
-        this.state = {mostrarA: true}
+        this.state = {isUserLogged: false}
     }
     render () {
         return (
             <div>
                 <h4>Conditional Section</h4>
-                {this.state.mostrarA 
-                    ? <ComponentA />
-                    : <ComponentB />
+                {this.state.isUserLogged 
+                    ? <LogoutButton />
+                    : <LoginButton />
                 }
             </div>
         )

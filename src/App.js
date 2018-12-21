@@ -8,8 +8,8 @@ class App extends Component {
     return (
       <div>
         <Navigation />
-        {numbers.map(number => {
-          return <p>I am the number {number}</p>
+        {numbers.map((number, index) => {
+          return <p key={index}>I am the number {number}</p>
         })}
       </div>
     );

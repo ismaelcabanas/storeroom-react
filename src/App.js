@@ -7,7 +7,7 @@ class CarItem extends Component {
     const {car} = this.props
 
     return (
-      <li key={car.id}>
+      <li>
         <p><strong>Nombre: </strong>{car.name}</p>
         <p><strong>Marca: </strong>{car.company}</p>
       </li>
@@ -17,7 +17,7 @@ class CarItem extends Component {
 
 class App extends Component {
   render() {
-    
+
     return (
       <div>
         <Navigation />
@@ -25,7 +25,7 @@ class App extends Component {
         <ul>
           {
             cars.map(car => {
-              return <CarItem car={car} />
+              return <CarItem  key={car.id} car={car} />
             })
           }          
         </ul>

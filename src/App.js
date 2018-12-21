@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navigation from './components/Navigation';
+import cars from './data/cars.json';
 
 class App extends Component {
   render() {
@@ -8,9 +9,19 @@ class App extends Component {
     return (
       <div>
         <Navigation />
-        {numbers.map((number, index) => {
-          return <p key={index}>I am the number {number}</p>
-        })}
+        <h4>Trabajando con lista de objetos</h4>
+        <ul>
+          {
+            cars.map(car => {
+              return (
+                <li key={car.id}>
+                  <p><strong>Nombre: </strong>{car.name}</p>
+                  <p><strong>Marca: </strong>{car.company}</p>
+                </li>
+              )
+            })
+          }          
+        </ul>
       </div>
     );
   }

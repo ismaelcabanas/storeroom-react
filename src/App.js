@@ -2,14 +2,19 @@ import React, { Component } from 'react';
 import Navigation from './components/Navigation';
 
 class App extends Component {
-  render() {
+  handleClick(e) {
+    console.log(e)
+    console.log(e.nativeEvent)
+    alert('Hi there!')
+  }
 
+  render() {
     return (
       <div>
         <Navigation />
         <div className="container">
           <h4>Events</h4>
-          <button onClick={() => alert('Hi there!')}>Hi there!</button>
+          <button onClick={this.handleClick}>Hi there!</button>
         </div>        
       </div>
     );

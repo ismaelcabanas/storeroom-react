@@ -9,7 +9,7 @@ class App extends Component {
         <Navigation />
         <div className="container">
           <h4>Events</h4>
-          <button>Hi there!</button>
+          <button onClick={() => alert('Hi there!')}>Hi there!</button>
         </div>        
       </div>
     );

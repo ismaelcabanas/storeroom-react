@@ -1,19 +1,5 @@
 import React, { Component } from 'react';
 import Navigation from './components/Navigation';
-import cars from './data/cars.json';
-
-class CarItem extends Component {
-  render() {
-    const {car} = this.props
-
-    return (
-      <li>
-        <p><strong>Nombre: </strong>{car.name}</p>
-        <p><strong>Marca: </strong>{car.company}</p>
-      </li>
-    )
-  }
-}
 
 class App extends Component {
   render() {
@@ -21,14 +7,10 @@ class App extends Component {
     return (
       <div>
         <Navigation />
-        <h4>Trabajando con lista de objetos</h4>
-        <ul>
-          {
-            cars.map(car => {
-              return <CarItem  key={car.id} car={car} />
-            })
-          }          
-        </ul>
+        <div className="container">
+          <h4>Events</h4>
+          <button>Hi there!</button>
+        </div>        
       </div>
     );
   }

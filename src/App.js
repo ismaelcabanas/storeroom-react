@@ -8,7 +8,7 @@ class App extends Component {
     this.state = {mouseX: 0, mouseY: 0}
   }
 
-  handleMouseMove(e) {
+  handleMouseMove = e => {
     const {clientX, clientY} = e
     this.setState({mouseX: clientX, mouseY: clientY})
   }

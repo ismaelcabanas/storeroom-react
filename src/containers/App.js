@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Navigation from './components/Navigation';
-import AddStoreroom from './components/storeroom/AddStoreroom'
+import Navigation from '../components/Navigation';
+import AddStoreroom from '../components/storeroom/AddStoreroom'
 
 class App extends Component {
 

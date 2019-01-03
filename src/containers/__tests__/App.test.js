@@ -19,5 +19,6 @@ describe("App", function() {
     const storeroom = mountedApp.find('AddStoreroom');
     expect(storeroom.length).toBe(1);
   });
+  
 });
 

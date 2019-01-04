@@ -7,7 +7,7 @@ describe("AddStoreroom", function() {
   let mountedAddStoreroom = shallow(<AddStoreroom />);
 
   it('renders without crashing', () => {
-    let mountedAddStoreroom = shallow(<AddStoreroom />);
+    shallow(<AddStoreroom />);
   });
   
   it('renders add storeroom header', () => {

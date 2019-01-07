@@ -15,19 +15,9 @@ describe("AddStoreroom", function() {
     expect(header.length).toBe(1);
   });
 
-  it('renders one label', () => {
-    const label = mountedAddStoreroom.find("Label");
-    expect(label.length).toBe(1);
-  });
-
-  it('renders one text', () => {
-    const descriptionText = mountedAddStoreroom.find("Text");
-    expect(descriptionText.length).toBe(1);
-  });
-
-  it('renders one button', () => {
-    const saveButton = mountedAddStoreroom.find("Button");
-    expect(saveButton.length).toBe(1);
+  it('renders add storeroom form', () => {
+    const addStoreroomForm = mountedAddStoreroom.find("AddStoreroomForm");
+    expect(addStoreroomForm.length).toBe(1);
   });
 });
   

@@ -10,7 +10,7 @@ describe("Label", function() {
     });
 
     it('renders without crashing', () => {
-        let mountedLabel = shallow(<Label />);
+        shallow(<Label />);
     });
 
     it('renders a label', () => {

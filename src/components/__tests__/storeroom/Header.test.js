@@ -11,7 +11,7 @@ describe("Header", function() {
     });
 
     it('renders without crashing', () => {
-        let mountedHeader = shallow(<Header />);
+        shallow(<Header />);
     });
 
     it('renders a header', () => {

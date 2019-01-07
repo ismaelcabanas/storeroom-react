@@ -4,18 +4,22 @@ import App from '../../containers/App';
 
 describe("App", function() {
 
-  it('renders without crashing', () => {
-    let mountedApp = shallow(<App />);  
+  let mountedApp;
+
+  beforeEach(() => {
+    mountedApp = shallow(<App />);    
   });
 
-  it('renders menu navigation', () => {
-    let mountedApp = shallow(<App />);
+  it('renders without crashing', () => {
+    shallow(<App />);  
+  });
+
+  it('renders menu navigation', () => {    
     const navigation = mountedApp.find('Navigation');
     expect(navigation.length).toBe(1);
   });
 
-  it('renders add storeroom form', () => {
-    let mountedApp = shallow(<App />);
+  it('renders add storeroom form', () => {    
     const storeroom = mountedApp.find('AddStoreroom');
     expect(storeroom.length).toBe(1);
   });

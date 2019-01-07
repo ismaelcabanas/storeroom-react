@@ -22,4 +22,9 @@ describe("AddStoreroomForm", function() {
         const textFormElement = mountedForm.find('TextFormElement');
         expect(textFormElement.length).toBe(1);
     });
+
+    it('renders a submit button', () => {
+        const submitButtom = mountedForm.find('Button');
+        expect(submitButtom.length).toBe(1);
+    });
 });

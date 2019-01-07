@@ -5,7 +5,7 @@ import AddStoreroomForm from '../components/storeroom/AddStoreroomForm';
 class AddStoreroom extends Component {
     render() {
         return (
-            <div className="container">
+            <div>
                 <Header />
                 <AddStoreroomForm />
             </div>                

@@ -5,7 +5,7 @@ import Text from '../storeroom/Text';
 class TextFormElement extends Component {
     render() {
         return (
-            <div>
+            <div className="form-group">
                 <Label />
                 <Text />
             </div>

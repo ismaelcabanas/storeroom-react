@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Label extends Component {
     render() {
-        return (<label>Name</label>)
+        return (<label htmlFor={this.props.refered}>Name</label>)
     }
 }
 

@@ -18,3 +18,21 @@ describe("Label", function() {
         expect(labelDescription.length).toBe(1);
     });
 });
+
+describe("When the refered is passed to it", () => {
+    let mountedLabel;
+    let props;
+
+    beforeEach(() => {
+        props = {
+            refered: "myText"
+        };
+
+        mountedLabel = shallow(<Label {...props} />);
+    });
+
+    it('label refers to refered element', () => {
+        const forProperty = mountedLabel.find('label').prop('htmlFor');
+        expect(forProperty).toEqual('myText');
+    });
+});

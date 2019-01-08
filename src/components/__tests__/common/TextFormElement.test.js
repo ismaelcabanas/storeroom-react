@@ -23,3 +23,26 @@ describe("TextFormElement", () => {
         expect(text.length).toBe(1);
     });
 });
+
+describe("When the name of text form element is passed to it", () => {
+    let mountedTextFormElement;
+    let props;
+
+    beforeEach(() => {
+        props = {
+            name: "myName"
+        };
+
+        mountedTextFormElement = shallow(<TextFormElement {...props} />);
+    });
+
+    it('the name prop is passed to Label component', () => {
+        const labelComponent = mountedTextFormElement.find('Label');
+        expect(labelComponent.prop('refered')).toEqual('myName');
+    });
+
+    it('the name prop is passed to Text component', () => {
+        const textComponent = mountedTextFormElement.find('Text');
+        expect(textComponent.prop('name')).toEqual('myName');
+    });
+});

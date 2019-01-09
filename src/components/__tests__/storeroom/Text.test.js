@@ -25,7 +25,8 @@ describe("When the name is passed to it", () => {
 
     beforeEach(() => {
         props = {
-            name: "myName"
+            name: "myName",
+            placeholder: "Introduce your name"
         };
 
         mountedText = shallow(<Text {...props} />);
@@ -34,6 +35,11 @@ describe("When the name is passed to it", () => {
     it('input has the name', () => {
         const nameProperty = mountedText.find('input').prop('name');
         expect(nameProperty).toEqual('myName');
+    });
+
+    it('input has the placeholder', () => {
+        const placeHolderProperty = mountedText.find('input').prop('placeholder');
+        expect(placeHolderProperty).toEqual('Introduce your name');
     });
 });
 

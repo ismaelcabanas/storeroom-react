@@ -30,8 +30,7 @@ describe("When the name of text form element is passed to it", () => {
 
     beforeEach(() => {
         props = {
-            name: "myName",
-            placeholder: "Introduce the name"
+            name: "myName"
         };
 
         mountedTextFormElement = shallow(<TextFormElement {...props} />);
@@ -45,10 +44,41 @@ describe("When the name of text form element is passed to it", () => {
     it('the name prop is passed to Text component', () => {
         const textComponent = mountedTextFormElement.find('Text');
         expect(textComponent.prop('name')).toEqual('myName');
+    });    
+});
+
+describe("When the placeholder of text form element is passed to it", () => {
+    let mountedTextFormElement;
+    let props;
+
+    beforeEach(() => {
+        props = {
+            placeholder: "Introduce the name"
+        };
+
+        mountedTextFormElement = shallow(<TextFormElement {...props} />);
     });
 
     it('the placeholder prop is passed to Text component', () => {
         const textComponent = mountedTextFormElement.find('Text');
         expect(textComponent.prop('placeholder')).toEqual('Introduce the name');
     });
+});
+
+describe("When the value of text form element is passed to it", () => {
+    let mountedTextFormElement;
+    let props;
+
+    beforeEach(() => {
+        props = {
+            value: "myValue"
+        };
+
+        mountedTextFormElement = shallow(<TextFormElement {...props} />);
+    });
+
+    it('the value prop is passed to Text component', () => {
+        const textComponent = mountedTextFormElement.find('Text');
+        expect(textComponent.prop('value')).toEqual('myValue');
+    });    
 });

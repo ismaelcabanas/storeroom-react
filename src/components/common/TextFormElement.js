@@ -8,7 +8,7 @@ class TextFormElement extends Component {
         return (
             <div className="form-group">
                 <Label refered={this.props.name} />
-                <Text name={this.props.name} />
+                <Text name={this.props.name} placeholder={this.props.placeholder} />
             </div>
         )
     }

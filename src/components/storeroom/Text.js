@@ -5,7 +5,8 @@ class Text extends Component {
         return (<input type="text" 
                     name={this.props.name} 
                     className="form-control" 
-                    placeholder={this.props.placeholder} />)
+                    placeholder={this.props.placeholder} 
+                    value={this.props.value} />)
     }
 }
 

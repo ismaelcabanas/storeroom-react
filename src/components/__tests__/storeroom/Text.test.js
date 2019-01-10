@@ -19,7 +19,7 @@ describe("Text", () => {
     });
 });
 
-describe("When the name is passed to it", () => {
+describe("When the props ara passed to it", () => {
     let mountedText;
     let props;
 

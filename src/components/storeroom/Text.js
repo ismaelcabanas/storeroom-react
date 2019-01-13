@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
 class Text extends Component {
+    static defaultProps = {
+        value: ''
+    }
+
     render() {
         return (<input type="text" 
                     name={this.props.name} 
@@ -9,5 +13,6 @@ class Text extends Component {
                     value={this.props.value} />)
     }
 }
+
 
 export default Text;

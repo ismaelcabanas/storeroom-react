@@ -33,19 +33,28 @@ describe("When the props ara passed to it", () => {
         mountedText = shallow(<Text {...props} />);
     });
 
-    it('input has the name', () => {
+    it('text has the name', () => {
         const nameProperty = mountedText.find('input').prop('name');
         expect(nameProperty).toEqual('myName');
     });
 
-    it('input has the placeholder', () => {
+    it('text has the placeholder', () => {
         const placeHolderProperty = mountedText.find('input').prop('placeholder');
         expect(placeHolderProperty).toEqual('Introduce your name');
     });
 
-    it('input has the value', () => {
+    it('text has the value', () => {
         const valueProperty = mountedText.find('input').prop('value');
         expect(valueProperty).toEqual('MyValue');
     });
 });
 
+describe("When value prop is not passed", function() {
+    it('text has empty value', () => {
+        const EMPTY = '';
+        const mountedText = shallow(<Text />);
+        const valueProperty = mountedText.find('input').prop('value');
+        
+        expect(valueProperty).toEqual(EMPTY);
+    });
+});

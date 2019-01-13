@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
 
-class Text extends Component {
+class Text extends Component {    
     static defaultProps = {
         value: ''
     }
 
     render() {
+        const {
+            name,
+            placeholder,
+            value
+        } = this.props
+
         return (<input type="text" 
-                    name={this.props.name} 
+                    name={name} 
                     className="form-control" 
-                    placeholder={this.props.placeholder} 
-                    value={this.props.value} />)
+                    placeholder={placeholder} 
+                    value={value} />)
     }
 }
 
